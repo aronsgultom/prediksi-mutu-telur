@@ -8,7 +8,7 @@ import os
 # KONFIGURASI HALAMAN
 # ========================
 st.set_page_config(page_title="Prediksi Mutu Telur", layout="centered")
-st.title("🥚 Prediksi Mutu Telur (MobileNet CNN)")
+st.title("🥚 Prediksi Mutu Telur (KNN)")
 st.write("Upload gambar telur untuk mengetahui kelas mutunya.")
 
 # ========================
@@ -58,3 +58,4 @@ if uploaded_file is not None:
         st.write("Probabilitas tiap kelas:")
         for i, cls in enumerate(CLASS_NAMES):
             st.write(f"- {cls} : {preds[i]*100:.2f}%")
+
