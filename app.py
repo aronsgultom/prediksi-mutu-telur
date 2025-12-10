@@ -30,7 +30,7 @@ INPUT_HEIGHT = model.input_shape[1]
 INPUT_WIDTH  = model.input_shape[2]
 INPUT_CHANNEL = model.input_shape[3]
 
-st.success(f"✅ Model loaded dengan input {model.input_shape}")
+st.success(f"✅ Model loaded dengan input")
 
 # HARUS SAMA SAAT TRAINING
 CLASS_NAMES = ['mutu1', 'mutu2', 'mutu3', 'mutu4']
@@ -77,3 +77,4 @@ if uploaded_file is not None:
         st.subheader("Probabilitas Tiap Kelas:")
         for i, c in enumerate(CLASS_NAMES):
             st.write(f"{c}: {preds[i]*100:.2f}%")
+
