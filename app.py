@@ -8,7 +8,7 @@ import os
 # KONFIGURASI HALAMAN
 # ==============================
 st.set_page_config(page_title="Prediksi Mutu Telur", layout="centered")
-st.title("🥚 Prediksi Mutu Telur dengan CNN")
+st.title("🥚 Prediksi Mutu Telur dengan KNN")
 
 # ==============================
 # LOAD MODEL
@@ -77,4 +77,5 @@ if uploaded_file is not None:
         st.subheader("Probabilitas Tiap Kelas:")
         for i, c in enumerate(CLASS_NAMES):
             st.write(f"{c}: {preds[i]*100:.2f}%")
+
 
